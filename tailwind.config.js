@@ -5,8 +5,10 @@ export default {
   theme: {
     extend: {
       colors: {
-        primary: "#Fb923c",
+        // primary: "#Fb923c",
+        primary: "#0dc1d1",
         secondary: "#f3f3f3",
+        queen: "fcd8a9",
       },
       fontFamily: {
         roboto: ["Roboto"],

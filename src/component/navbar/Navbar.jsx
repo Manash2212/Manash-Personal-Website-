@@ -34,6 +34,12 @@ const Navbar = () => {
   };
 
   useEffect(() => {
+    if (showMenu) {
+      setShowMenu(false);
+    }
+  });
+
+  useEffect(() => {
     console.log("Use Effect Is Called");
     if (theme === "dark") {
       document.documentElement.classList.add("dark");
@@ -46,11 +52,13 @@ const Navbar = () => {
 
   return (
     <>
-      <nav className="bg-secondary dark:bg-gray-900 sticky top-0 shadow-lg">
-        <div className=" max-w-screen-xl container flex items-center justify-between py-3 sm:py-0 px-4 ">
-          <h1 className="text-3xl text-primary font-instrument italic font-bold">
-            Manash-Dev
-          </h1>
+      <nav className="bg-secondary dark:bg-gray-900  shadow-lg max-w-full">
+        <div className=" max-w-screen-xl container flex items-center justify-between py-3 sm:py-1 px-2 ">
+          <Link to="/">
+            <h1 className="text-3xl text-primary font-instrument italic font-bold cursor-pointer">
+              Manash-Dev
+            </h1>
+          </Link>
           {/* Desktopmenu */}
           <div className="hidden sm:block">
             <ul className="flex items-center gap-4">
@@ -58,7 +66,7 @@ const Navbar = () => {
                 <li key={i}>
                   <Link
                     to={menu.link}
-                    className="text-l font-semibold px-2 py-4 md:py-6 inline-block cursor-pointer dark:text-white uppercase"
+                    className="text-l font-semibold px-2 py-4 md:py-6  inline-block cursor-pointer dark:text-white uppercase hover:scale-125 duration-500"
                   >
                     {menu.name}
                   </Link>
@@ -78,7 +86,7 @@ const Navbar = () => {
             </ul>
           </div>
           {/* Mobile Menu */}
-          <div className="block sm:hidden m-2">
+          <div className="block sm:hidden ">
             <div className="flex items-center gap-4">
               {/* Theme Toggle */}
               {theme === "dark" ? (
@@ -98,8 +106,9 @@ const Navbar = () => {
                 onClick={toggleMenu}
               />
             </div>
+            {/* Hamburger */}
             {showMenu && (
-              <div className="fixed top-16 left-0 right-0 bg-red-500 bg-opacity-10 shadow-xl rounded-b-xl z-10 py-10 dark:bg-gray-900 dark:text-white">
+              <div className="fixed top-16 left-0 right-0 bg-primary bg-opacity-6  shadow-xl rounded-b-xl z-10 py-10 dark:bg-gray-900 dark:text-white">
                 <ul className="flex flex-col items-center justify-between">
                   {navMenus.map((menu, i) => (
                     <li key={i}>

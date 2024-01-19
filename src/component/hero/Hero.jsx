@@ -1,4 +1,5 @@
-import Person from "../../../public/person2.png";
+import Person from "../../../public/Manash.png";
+import { Link } from "react-router-dom";
 
 const Hero = () => {
   return (
@@ -24,9 +25,12 @@ const Hero = () => {
                 technical skills in creating responsive and visually appealing
                 web applications.
               </p>
-              <button className="border-2 border-red-800 px-4 py-1 mt-3 rounded-md font-roboto font-bold dark:text-white cursor-pointer">
-                Download CV
-              </button>
+              <Link
+                to="manashhalder2212@gmial.com"
+                className=" border-red-800 rounded-md  font-bold dark:text-white cursor-pointer primary-btn !px-6"
+              >
+                <p className=" hover:scale-125">Hire me</p>
+              </Link>
             </div>
           </div>
           {/* Image Container */}
@@ -34,7 +38,7 @@ const Hero = () => {
             <img
               src={Person}
               alt="Hero-img"
-              className="w-full md:max-w-lg mx-auto"
+              className="w-full max-h-full md:max-w-lg mx-auto"
             />
           </div>
         </div>
