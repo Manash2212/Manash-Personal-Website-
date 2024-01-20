@@ -1,4 +1,4 @@
-// import Person from "../../../public/person2.png";
+// import Skills from "../skills/Skills";
 import TiltCard from "./TiltCard";
 
 const About = () => {
@@ -6,7 +6,7 @@ const About = () => {
     <>
       <section
         id="about"
-        className="  bg-secondary dark:bg-slate-900 dark:text-white px-4 "
+        className=" w-full  bg-secondary dark:bg-slate-900 dark:text-white px-4 "
       >
         <div className="container  sm:py-16 py-12">
           <div className=" max-w-screen-xl  grid items-center gap-6 grid-cols-1 sm:grid-cols-2  ">
@@ -15,7 +15,7 @@ const About = () => {
             </div>
             <div className=" ">
               <h1 className="font-bold text-3xl text-gray-800 dark:text-white py-3">
-                About Me
+                ABOUT ME
               </h1>
               <p className="text-justify dark:text-gray-400 ">
                 I&apos;m a web developer from the{" "}
@@ -52,7 +52,7 @@ const About = () => {
                   <p className="dark:text-gray-400">
                     manashhalder2212@gmail.com
                   </p>
-                  <h3 className="font-bold uppercase dark:text-gray-200">
+                  <h3 className="font-bold uppercase dark:text-gray-200 pt-2 sm:pt-4">
                     Employment
                   </h3>
                   <p className="dark:text-gray-400">Open</p>

@@ -33,11 +33,11 @@ const Navbar = () => {
     setShowMenu(!showMenu);
   };
 
-  useEffect(() => {
-    if (showMenu) {
-      setShowMenu(false);
-    }
-  });
+  // useEffect(() => {
+  //   if (showMenu) {
+  //     setShowMenu(false);
+  //   }
+  // });
 
   useEffect(() => {
     console.log("Use Effect Is Called");
