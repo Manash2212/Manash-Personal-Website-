@@ -1,25 +1,29 @@
 // import React from "react";
 import { useEffect, useState } from "react";
-import { Link } from "react-router-dom";
+import { Link } from "react-scroll";
 import { FiMenu } from "react-icons/fi";
 import { BiSolidMoon, BiSolidSun } from "react-icons/bi";
 
 const navMenus = [
   {
     name: "Home",
-    link: "/",
+    link: "hero",
   },
   {
     name: "About",
-    link: "/about",
+    link: "about",
   },
   {
-    name: "Services",
-    link: "/services",
+    name: "Skills",
+    link: "skills",
+  },
+  {
+    name: "Portfolio",
+    link: "portfolio",
   },
   {
     name: "Contact",
-    link: "/contact",
+    link: "contact",
   },
 ];
 
@@ -52,9 +56,9 @@ const Navbar = () => {
 
   return (
     <>
-      <nav className="bg-secondary dark:bg-gray-900  shadow-lg max-w-full">
-        <div className=" max-w-screen-xl container flex items-center justify-between py-3 sm:py-1 px-2 ">
-          <Link to="/">
+      <nav className="w-full fixed bg-navSec backdrop-blur-sm dark:bg-navPrm  shadow-lg max-w-full z-50  ">
+        <div className="  max-w-screen-xl container flex items-center justify-between py-2 sm:py-1 px-2  ">
+          <Link to="hero">
             <h1 className="text-3xl text-primary font-instrument italic font-bold cursor-pointer">
               Manash-Dev
             </h1>
@@ -66,7 +70,12 @@ const Navbar = () => {
                 <li key={i}>
                   <Link
                     to={menu.link}
-                    className="text-l font-semibold px-2 py-4 md:py-6  inline-block cursor-pointer dark:text-white uppercase hover:scale-125 duration-500"
+                    activeClass="active"
+                    spy={true}
+                    // smooth={true}
+                    offset={20}
+                    duration={500}
+                    className="text-l font-semibold px-2 py-4 md:py-6  inline-block cursor-pointer dark:text-white uppercase hover:scale-125 duration-500 hover:text-primary "
                   >
                     {menu.name}
                   </Link>
@@ -108,12 +117,17 @@ const Navbar = () => {
             </div>
             {/* Hamburger */}
             {showMenu && (
-              <div className="fixed top-16 left-0 right-0 bg-primary bg-opacity-6  shadow-xl rounded-b-xl z-10 py-10 dark:bg-gray-900 dark:text-white">
+              <div className="sticky top-16 left-0 right-0 bg-primary bg-opacity-6  shadow-xl rounded-b-xl z-10 py-10 dark:bg-gray-900 dark:text-white">
                 <ul className="flex flex-col items-center justify-between">
                   {navMenus.map((menu, i) => (
                     <li key={i}>
                       <Link
                         to={menu.link}
+                        activeClass="active"
+                        spy={true}
+                        // smooth={true}
+                        offset={-100}
+                        duration={500}
                         className="text-xl font-semibold px-2 py-4 md:py-6 inline-block cursor-pointer"
                       >
                         {menu.name}

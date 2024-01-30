@@ -6,4 +6,8 @@
   .primary-btn {
     @apply bg-primary text-white cursor-pointer hover:bg-primary/80 px-4 py-2 rounded-lg my-3;
   }
+
+  .menu {
+    @apply text-sm font-medium text-primary relative cursor-pointer after:content-[''] after:w-full after:h-[3px] after:bg-slate-900 after:absolute after:left-0 after:-bottom-2 after:rounded after:-translate-x-11 after:opacity-0 after:transition-all after:hover:translate-x-0 after:hover:opacity-100;
+  }
 }

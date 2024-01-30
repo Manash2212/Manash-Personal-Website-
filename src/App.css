@@ -1,4 +1,9 @@
 html {
   scroll-behavior: smooth;
+  scroll-snap-type: mandatory;
   width: 100%;
+}
+
+section {
+  scroll-snap-align: center;
 }

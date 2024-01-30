@@ -4,8 +4,11 @@ import { Link } from "react-router-dom";
 const Hero = () => {
   return (
     <>
-      <main className=" bg-secondary dark:bg-gray-900 dark:text-white box-border">
-        <div className=" max-w-screen-xl px-5 container w-full h-screen grid grid-cols-1 sm:grid-cols-2 items-center space-y-2 pb-12 sm:py-0">
+      <section
+        id="hero"
+        className="w-full bg-secondary dark:bg-gray-900 dark:text-white box-border"
+      >
+        <div className=" max-w-screen-xl px-5 container h-screen grid grid-cols-1 sm:grid-cols-2 items-center space-y-2 pb-12 sm:py-0 ">
           <div className="">
             <div className="space-y-2 grid justify-items-center sm:justify-items-start">
               {" "}
@@ -42,7 +45,7 @@ const Hero = () => {
             />
           </div>
         </div>
-      </main>
+      </section>
     </>
   );
 };

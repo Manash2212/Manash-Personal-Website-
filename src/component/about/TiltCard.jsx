@@ -45,16 +45,16 @@ const TiltCard = () => {
           rotateY,
           transformStyle: "preserve-3d",
         }}
-        className=" relative h-96 w-full rounded-xl "
+        className=" w-full rounded-xl "
       >
         <div
           style={{
             transform: "translateZ(75px)",
             transformStyle: "preserve-3d",
           }}
-          className="absolute inset-4 grid place-content-center  "
+          className=" inset-4 grid place-content-center  "
         >
-          <img src={Img} alt="" />
+          <img src={Img} alt="hover-effect" />
         </div>
       </motion.div>
     </>
