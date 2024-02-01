@@ -1,8 +1,13 @@
 // import React from "react";
 import { useEffect, useState } from "react";
 import { Link } from "react-scroll";
-import { FiMenu } from "react-icons/fi";
+// import { FiMenu } from "react-icons/fi";
+
+import { FiX } from "react-icons/fi";
+import { FiAlignRight } from "react-icons/fi";
 import { BiSolidMoon, BiSolidSun } from "react-icons/bi";
+
+import Logo from "../../../public/Logo1.png";
 
 const navMenus = [
   {
@@ -33,9 +38,9 @@ const Navbar = () => {
     localStorage.getItem("theme") ? localStorage.getItem("theme") : "light"
   );
 
-  const toggleMenu = () => {
-    setShowMenu(!showMenu);
-  };
+  // const toggleMenu = () => {
+  //   setShowMenu(!showMenu);
+  // };
 
   // useEffect(() => {
   //   if (showMenu) {
@@ -57,12 +62,19 @@ const Navbar = () => {
   return (
     <>
       <nav className="w-full fixed bg-navSec backdrop-blur-sm dark:bg-navPrm  shadow-lg max-w-full z-50  ">
-        <div className="  max-w-screen-xl container flex items-center justify-between py-2 sm:py-1 px-2  ">
-          <Link to="hero">
-            <h1 className="text-3xl text-primary font-instrument italic font-bold cursor-pointer">
-              Manash-Dev
-            </h1>
-          </Link>
+        <div className="  max-w-screen-xl container flex items-center justify-between py-1 sm:py-1 px-2  ">
+          <div className="author flex">
+            <Link to="hero" className="flex items-center gap-2">
+              <img
+                src={Logo}
+                alt="logo"
+                className="w-10 h-10 rounded-full cursor-pointer"
+              />
+              <h1 className="text-2xl text-primary font-instrument italic font-bold cursor-pointer max-sm:hidden">
+                Manash-Dev
+              </h1>
+            </Link>
+          </div>
           {/* Desktopmenu */}
           <div className="hidden sm:block">
             <ul className="flex items-center gap-4">
@@ -75,7 +87,7 @@ const Navbar = () => {
                     // smooth={true}
                     offset={20}
                     duration={500}
-                    className="text-l font-semibold px-2 py-4 md:py-6  inline-block cursor-pointer dark:text-white uppercase hover:scale-125 duration-500 hover:text-primary "
+                    className="text-l font-semibold px-2 py-2 md:py-4  inline-block cursor-pointer dark:text-white uppercase hover:scale-125 duration-500 hover:text-primary "
                   >
                     {menu.name}
                   </Link>
@@ -110,14 +122,17 @@ const Navbar = () => {
                 />
               )}
 
-              <FiMenu
-                className="text-3xl cursor-pointer dark:text-white"
-                onClick={toggleMenu}
-              />
+              <div
+                className="menu text-2xl outline-none text-black dark:text-secondary"
+                onClick={() => setShowMenu(!showMenu)}
+              >
+                {/* <FiX /> */}
+                {showMenu ? <FiX /> : <FiAlignRight />}
+              </div>
             </div>
             {/* Hamburger */}
             {showMenu && (
-              <div className="sticky top-16 left-0 right-0 bg-primary bg-opacity-6  shadow-xl rounded-b-xl z-10 py-10 dark:bg-gray-900 dark:text-white">
+              <div className="absolute top-16 left-0 right-0 bg-primary bg-opacity-6  shadow-xl rounded-b-xl z-10 py-10 dark:bg-gray-900 dark:text-white">
                 <ul className="flex flex-col items-center justify-between">
                   {navMenus.map((menu, i) => (
                     <li key={i}>
@@ -126,7 +141,7 @@ const Navbar = () => {
                         activeClass="active"
                         spy={true}
                         // smooth={true}
-                        offset={-100}
+                        offset={50}
                         duration={500}
                         className="text-xl font-semibold px-2 py-4 md:py-6 inline-block cursor-pointer"
                       >

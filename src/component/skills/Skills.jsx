@@ -10,10 +10,11 @@ const Skills = () => {
           scale: 1.1,
         }}
         initial={{ x: 0, y: 0 }}
-        animate={{ x: x, y: y }}
-        transition={{
-          duration: 1.5,
-        }}
+        whileInView={{ x: x, y: y, transition: { duration: 1.5 } }}
+        viewport={{ once: true }}
+        // transition={{
+        //   duration: 1.5,
+        // }}
       >
         <h2 className="dark:text-secondary  ">{name}</h2>
       </motion.div>

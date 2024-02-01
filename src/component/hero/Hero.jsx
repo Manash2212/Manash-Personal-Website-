@@ -6,9 +6,9 @@ const Hero = () => {
     <>
       <section
         id="hero"
-        className="w-full bg-secondary dark:bg-gray-900 dark:text-white box-border"
+        className="w-full bg-secondary h-[calc(100% - 24px)] dark:bg-gray-900 dark:text-white box-border"
       >
-        <div className=" max-w-screen-xl px-5 container h-screen grid grid-cols-1 sm:grid-cols-2 items-center space-y-2 pb-12 sm:py-0 ">
+        <div className=" max-w-screen-xl px-5 py-10 container h-screen grid grid-cols-1 sm:grid-cols-2 items-center space-y-2 pb-12 sm:py-0 ">
           <div className="">
             <div className="space-y-2 grid justify-items-center sm:justify-items-start">
               {" "}
@@ -19,7 +19,7 @@ const Hero = () => {
               <p className="text-xl md:text-5xl font-bold text-black/80 dark:text-white">
                 I&apos;m Manash Halder
               </p>
-              <p className="text-2xl text-gray-700 font-instrument italic tracking-wide dark:text-white mt-3">
+              <p className="text-2xl text-center text-gray-700 font-instrument italic tracking-wide dark:text-white mt-3">
                 Frontend Developer and UI Designer
               </p>
               <p className="text-gray-700 dark:text-white  text-justify font-roboto mt-2">
