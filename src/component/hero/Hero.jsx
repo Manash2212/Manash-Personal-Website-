@@ -6,7 +6,7 @@ const Hero = () => {
     <>
       <section
         id="hero"
-        className="w-full bg-secondary h-[calc(100% - 24px)] dark:bg-gray-900 dark:text-white box-border"
+        className="w-full bg-secondary h-[calc(100% - 24px)] dark:bg-gray-900 dark:text-white box-border max-sm:pt-10"
       >
         <div className=" max-w-screen-xl px-5 py-10 container h-screen grid grid-cols-1 sm:grid-cols-2 items-center space-y-2 pb-12 sm:py-0 ">
           <div className="">

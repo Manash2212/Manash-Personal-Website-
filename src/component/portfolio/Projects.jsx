@@ -37,7 +37,7 @@ const Projects = () => {
           {projects.map((project, i) => (
             <div
               key={i}
-              className=" bg-slate-200 dark:bg-gray-800 flex items-center justify-between max-sm:flex-col rounded-xl hover:bg-slate-300 shadow-lg"
+              className=" bg-slate-200 dark:bg-gray-800 flex items-center justify-between max-sm:flex-col rounded-xl hover:bg-slate-300 shadow-lg py-4"
             >
               <Link
                 to={project.url}
@@ -50,7 +50,9 @@ const Projects = () => {
                   className="max-w-48 max-h-48 m-2 rounded-xl"
                 />
                 <div className="aboutContent mx-auto flex flex-col gap-2 text-center">
-                  <h2 className="text-2xl dark:text-white  ">{project.name}</h2>
+                  <h2 className="text-3xl max-sm:text-2xl dark:text-white  ">
+                    {project.name}
+                  </h2>
                   <p className="text-sm text-center dark:text-gray-400 font-medium">
                     {project.description}
                   </p>
