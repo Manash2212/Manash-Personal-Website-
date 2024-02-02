@@ -11,7 +11,7 @@ export default {
         navPrm: "rgb(17 24 39 / 0.91)",
         navSec: "rgb(243 243 243 / 0.90)",
         queen: "fcd8a9",
-        gradiant: " linear-gradient(0.25turn, #3f87a6, #ebf8e1, #f69d3c)",
+        gradient: " linear-gradient(0.25turn, #3f87a6, #ebf8e1, #f69d3c)",
       },
       fontFamily: {
         roboto: ["Roboto"],

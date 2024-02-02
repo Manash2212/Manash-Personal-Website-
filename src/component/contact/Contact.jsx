@@ -19,7 +19,7 @@ const Contact = () => {
         style={backgrouundStyle}
       >
         <div className="container text-center">
-          <h1 className="heading text-7xl max-sm:text-5xl font-bold">
+          <h1 className="heading text-6xl max-sm:text-5xl font-bold uppercase">
             Get In Touch
           </h1>
           <div className="max-w-screen-xl mx-auto  flex items-center justify-between max-sm:flex-col max-sm:gap-5 py-20 px-5">
@@ -32,8 +32,8 @@ const Contact = () => {
             </div>
             <div className="contactForm shadow-xl rounded-xl py-3">
               {" "}
-              <div className="contactPage flex flex-col items-center justify-center gap-5">
-                <h2 className="contactTitle text-5xl font-bold max-sm:text-3xl">
+              <div className="contactPage flex flex-col items-center justify-center gap-5 px-3">
+                <h2 className="contactTitle text-5xl font-bold max-sm:text-3xl bg-gradient-to-l from-red-500 to-sky-500  text-transparent bg-clip-text">
                   Contact Me
                 </h2>
                 <span className="contactDesc text-base font-medium text-slate-900 dark:text-slate-300 ">
@@ -62,7 +62,7 @@ const Contact = () => {
                     className="msg w-3/5 max-sm:w-full border-none outline-none text-base font-medium rounded-xl py-2 bg-slate-400 placeholder-gray-800 dark:bg-slate-300 px-2 text-black dark:text-gray-900"
                     name="message"
                     placeholder="Leave a message"
-                    rows="5"
+                    rows="4"
                   ></textarea>
                   <button
                     value="Send"
