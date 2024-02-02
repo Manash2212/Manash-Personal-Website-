@@ -1,10 +1,39 @@
-// import React from 'react'
-
-// import TiltCard from "../about/TiltCard";
+import { useRef, useState } from "react";
 import ContactImg from "../../../public/contact.png";
-// import BgMap from "../../../public/map.png";
+import emailjs from "@emailjs/browser";
 
 const Contact = () => {
+  const [nameClear, setNameClear] = useState();
+  const [emialClear, setEmailClear] = useState();
+  const [textAreaClear, setTextAreaClear] = useState();
+
+  const form = useRef();
+
+  const sendEmail = (e) => {
+    e.preventDefault();
+
+    emailjs
+      .sendForm(
+        "service_i6lpfmp",
+        "template_de84e6j",
+        form.current,
+        "0bs_8tPmosMkNkOQv"
+      )
+      .then(
+        (result) => {
+          console.log(`${result.text} Email has send`);
+          alert("Your Message has send 🚀");
+        },
+        (error) => {
+          console.log(`${error.text} Error has generated `);
+          alert("Sorry You Cant sent Message anymore, server is poor.😒");
+        }
+      );
+    setNameClear("");
+    setEmailClear("");
+    setTextAreaClear("");
+  };
+
   const backgrouundStyle = {
     backgroundImage: "url(../../../public/map2.png",
     backgrouundSize: "cover",
@@ -41,7 +70,8 @@ const Contact = () => {
                   the form to connect with me.
                 </span>
                 <form
-                  action=""
+                  ref={form}
+                  onSubmit={sendEmail}
                   className="contactForm w-full flex flex-col items-center justify-center gap-6  "
                 >
                   <input
@@ -49,6 +79,8 @@ const Contact = () => {
                     className=" name w-3/5 max-sm:w-full border-none outline-none text-base font-medium rounded-xl py-2 bg-slate-400 placeholder-gray-800 dark:bg-slate-300 px-2 text-black dark:text-gray-900"
                     name="from_name"
                     placeholder="Enter your name"
+                    value={nameClear}
+                    onChange={(e) => setNameClear(e.target.value)}
                     required
                   />
                   <input
@@ -56,12 +88,16 @@ const Contact = () => {
                     className=" email w-3/5 max-sm:w-full border-none outline-none text-base font-medium rounded-xl py-2 bg-slate-400 placeholder-gray-800 dark:bg-slate-300 px-2 text-black dark:text-gray-900"
                     name="your_email"
                     placeholder="Enter your email"
+                    value={emialClear}
+                    onChange={(e) => setEmailClear(e.target.value)}
                     required
                   />
                   <textarea
                     className="msg w-3/5 max-sm:w-full border-none outline-none text-base font-medium rounded-xl py-2 bg-slate-400 placeholder-gray-800 dark:bg-slate-300 px-2 text-black dark:text-gray-900"
                     name="message"
                     placeholder="Leave a message"
+                    value={textAreaClear}
+                    onChange={(e) => setTextAreaClear(e.target.value)}
                     rows="4"
                   ></textarea>
                   <button
