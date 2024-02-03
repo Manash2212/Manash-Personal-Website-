@@ -1,13 +1,11 @@
 // import React from "react";
 import { useEffect, useState } from "react";
 import { Link } from "react-scroll";
-// import { FiMenu } from "react-icons/fi";
-
 import { FiX } from "react-icons/fi";
 import { FiAlignRight } from "react-icons/fi";
 import { BiSolidMoon, BiSolidSun } from "react-icons/bi";
-
 import Logo from "../../../public/Logo1.png";
+import { motion } from "framer-motion";
 
 const navMenus = [
   {
@@ -38,16 +36,6 @@ const Navbar = () => {
     localStorage.getItem("theme") ? localStorage.getItem("theme") : "light"
   );
 
-  // const toggleMenu = () => {
-  //   setShowMenu(!showMenu);
-  // };
-
-  // useEffect(() => {
-  //   if (showMenu) {
-  //     setShowMenu(false);
-  //   }
-  // });
-
   useEffect(() => {
     console.log("Use Effect Is Called");
     if (theme === "dark") {
@@ -65,44 +53,71 @@ const Navbar = () => {
         <div className="  max-w-screen-xl container flex items-center justify-between py-1 sm:py-1 px-2  ">
           <div className="author flex">
             <Link to="hero" className="flex items-center gap-2">
-              <img
+              <motion.img
                 src={Logo}
                 alt="logo"
                 className="w-10 h-10 rounded-full cursor-pointer"
+                initial={{ opacity: 0, translateX: -100 }}
+                animate={{ opacity: 1, translateX: 0 }}
+                transition={{ duration: 0.8, delay: 0.5 }}
               />
-              <h1 className="text-2xl text-primary font-instrument italic font-bold cursor-pointer max-sm:hidden">
+              <motion.h1
+                className="text-2xl text-primary font-instrument italic font-bold cursor-pointer max-sm:hidden"
+                initial={{ opacity: 0, scale: 0.5 }}
+                animate={{ opacity: 1, scale: 1 }}
+                transition={{ duration: 0.8, delay: 0.5 }}
+              >
                 Manash-Dev
-              </h1>
+              </motion.h1>
             </Link>
           </div>
           {/* Desktopmenu */}
           <div className="hidden sm:block">
             <ul className="flex items-center gap-4">
               {navMenus.map((menu, i) => (
-                <li key={i}>
+                <motion.li
+                  key={i}
+                  initial={{ opacity: 0, translateY: -100 }}
+                  animate={{ opacity: 1, translateY: 0 }}
+                  transition={{ duration: 1, delay: i * 0.1 }}
+                >
                   <Link
                     to={menu.link}
                     activeClass="active"
                     spy={true}
                     // smooth={true}
-                    offset={20}
+                    offset={-20}
                     duration={500}
                     className="text-l font-semibold px-2 py-2 md:py-4  inline-block cursor-pointer dark:text-white uppercase hover:scale-125 duration-500 hover:text-primary "
                   >
                     {menu.name}
                   </Link>
-                </li>
+                </motion.li>
               ))}
               {theme === "dark" ? (
-                <BiSolidSun
-                  className="text-2xl cursor-pointer dark:text-white"
-                  onClick={() => setTheme("light")}
-                />
+                <motion.div
+                  className="sun"
+                  initial={{ opacity: 0, scale: 0 }}
+                  animate={{ opacity: 1, scale: 1 }}
+                  transition={{ duration: 0.8, delay: 0.5 }}
+                >
+                  <BiSolidSun
+                    className="text-2xl cursor-pointer dark:text-white"
+                    onClick={() => setTheme("light")}
+                  />
+                </motion.div>
               ) : (
-                <BiSolidMoon
-                  className="text-2xl cursor-pointer light:bg-gray200 dark:text-white "
-                  onClick={() => setTheme("dark")}
-                />
+                <motion.div
+                  className="moon"
+                  initial={{ opacity: 0, scale: 0 }}
+                  animate={{ opacity: 1, scale: 1 }}
+                  transition={{ duration: 0.8, delay: 0.5 }}
+                >
+                  <BiSolidMoon
+                    className="text-2xl cursor-pointer light:bg-gray200 dark:text-white "
+                    onClick={() => setTheme("dark")}
+                  />
+                </motion.div>
               )}
             </ul>
           </div>
@@ -111,15 +126,29 @@ const Navbar = () => {
             <div className="flex items-center gap-4">
               {/* Theme Toggle */}
               {theme === "dark" ? (
-                <BiSolidSun
-                  className="text-2xl cursor-pointer dark:text-white"
-                  onClick={() => setTheme("light")}
-                />
+                <motion.div
+                  className="mobileSun"
+                  initial={{ opacity: 0, scale: 0 }}
+                  animate={{ opacity: 1, scale: 1 }}
+                  transition={{ duration: 0.8, delay: 0.5 }}
+                >
+                  <BiSolidSun
+                    className="text-2xl cursor-pointer dark:text-white"
+                    onClick={() => setTheme("light")}
+                  />
+                </motion.div>
               ) : (
-                <BiSolidMoon
-                  className="text-2xl cursor-pointer light:bg-gray200 dark:text-white "
-                  onClick={() => setTheme("dark")}
-                />
+                <motion.div
+                  className="mobielMoon"
+                  initial={{ opacity: 0, scale: 0 }}
+                  animate={{ opacity: 1, scale: 1 }}
+                  transition={{ duration: 0.8, delay: 0.5 }}
+                >
+                  <BiSolidMoon
+                    className="text-2xl cursor-pointer light:bg-gray200 dark:text-white "
+                    onClick={() => setTheme("dark")}
+                  />
+                </motion.div>
               )}
 
               <div
@@ -135,7 +164,12 @@ const Navbar = () => {
               <div className="absolute top-16 left-0 right-0 bg-primary bg-opacity-6  shadow-xl rounded-b-xl z-10 py-10 dark:bg-gray-900 dark:text-white">
                 <ul className="flex flex-col items-center justify-between">
                   {navMenus.map((menu, i) => (
-                    <li key={i}>
+                    <motion.li
+                      key={i}
+                      initial={{ opacity: 0, translateY: -100 }}
+                      animate={{ opacity: 1, translateY: 0 }}
+                      transition={{ duration: 1, delay: i * 0.1 }}
+                    >
                       <Link
                         to={menu.link}
                         activeClass="active"
@@ -147,7 +181,7 @@ const Navbar = () => {
                       >
                         {menu.name}
                       </Link>
-                    </li>
+                    </motion.li>
                   ))}
                 </ul>
               </div>

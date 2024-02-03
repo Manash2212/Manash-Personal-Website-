@@ -12,23 +12,45 @@ const Skills = () => {
         initial={{ x: 0, y: 0 }}
         whileInView={{ x: x, y: y, transition: { duration: 1.5 } }}
         viewport={{ once: true }}
-        // transition={{
-        //   duration: 1.5,
-        // }}
       >
         <h2 className="dark:text-secondary  ">{name}</h2>
       </motion.div>
     );
   };
+
+  // onView Animation
+  const tiltVariants = {
+    initial: {
+      y: 100,
+      opacity: 0,
+    },
+    animate: {
+      y: 0,
+      opacity: 1,
+      transition: {
+        duration: 1,
+        // delay: 0.2,
+      },
+    },
+  };
+
   return (
     <>
       <section
         id="skills"
         className=" w-full h-fit py-10 dark:text-white dark:bg-slate-900 bg-secondary max-md:h-[90vh] max-sm:h-[70vh] "
       >
-        <h1 className="font-bold text-7xl max-sm:text-5xl text-center dark:text-white pb-10  max-md:pb-3 ">
+        <motion.h1
+          className="font-bold text-7xl max-sm:text-5xl text-center dark:text-white pb-10  max-md:pb-3 "
+          variants={tiltVariants}
+          initial="initial"
+          whileInView="animate"
+          viewport={{
+            once: true,
+          }}
+        >
           SKILLS
-        </h1>
+        </motion.h1>
         <div
           className="max-w-screen-xl h-[80vh] relative flex items-center justify-center rounded-full m-auto  pb-10  dark:bg-circularDark bg-circularLight max-md:h-[70vh] max-sm:h-[50vh] max-md:pb-2 max-md:bg-circularLightMD max-sm:bg-circularLightSM 
         dark:max-md:bg-circularDarkMD dark:max-sm:bg-circularDarkSM 
@@ -48,7 +70,7 @@ const Skills = () => {
           <Item name="HTML" x="7vw" y="-15vw" />
           <Item name="CSS" x="-35vw" y="-7vw" />
           <Item name="Javascript" x="12vw" y="12vw" />
-          <Item name="BootStrap" x="0vw" y="22vw" />
+          <Item name="BootStrap" x="0vw" y="19vw" />
           <Item name="React.js" x="-20vw" y="-15vw" />
           <Item name="Vite.js" x="16vw" y="-20vw" />
           <Item name="Node.js" x="38vw" y="-5vw" />

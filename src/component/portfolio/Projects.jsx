@@ -1,4 +1,5 @@
 import { Link } from "react-router-dom";
+import { motion } from "framer-motion";
 
 const projects = [
   {
@@ -28,6 +29,12 @@ const projects = [
     url: "https://crypto-currency-chakra-ui.vercel.app/",
   },
 ];
+const cardVariants = {
+  animate: {
+    opacity: 1,
+    y: 0,
+  },
+};
 
 const Projects = () => {
   return (
@@ -35,9 +42,22 @@ const Projects = () => {
       <section id="projects" className="my-10 container ">
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 order- ">
           {projects.map((project, i) => (
-            <div
+            <motion.div
               key={i}
               className=" bg-slate-200 dark:bg-gray-800 flex items-center justify-between max-sm:flex-col rounded-xl hover:bg-slate-300 shadow-lg py-4"
+              variants={cardVariants}
+              initial={{
+                opacity: 0,
+                y: 100,
+              }}
+              whileInView="animate"
+              transition={{
+                duration: 0.8,
+                delay: i * 0.2,
+              }}
+              viewport={{
+                once: true,
+              }}
             >
               <Link
                 to={project.url}
@@ -58,7 +78,7 @@ const Projects = () => {
                   </p>
                 </div>
               </Link>
-            </div>
+            </motion.div>
           ))}
         </div>
       </section>

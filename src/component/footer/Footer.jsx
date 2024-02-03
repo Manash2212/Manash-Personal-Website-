@@ -33,27 +33,27 @@ const Footer = () => {
               <h1 className="col1Heading py-3 text-xl font-bold ">
                 Quick Links
               </h1>
-              <LinkScroll>
+              <LinkScroll to="hero">
                 <h3 className="col1Title font-medium text-center cursor-pointer">
                   Home
                 </h3>
               </LinkScroll>
-              <LinkScroll>
+              <LinkScroll to="about">
                 <h3 className="col1Title font-medium text-center cursor-pointer">
                   About
                 </h3>
               </LinkScroll>
-              <LinkScroll>
+              <LinkScroll to="skills">
                 <h3 className="col1Title font-medium text-center cursor-pointer">
                   Skills
                 </h3>
               </LinkScroll>
-              <LinkScroll>
+              <LinkScroll to="portfolio">
                 <h3 className="col1Title font-medium text-center cursor-pointer">
                   Portfolio
                 </h3>
               </LinkScroll>
-              <LinkScroll>
+              <LinkScroll to="contact">
                 <h3 className="col1Title font-medium text-center cursor-pointer">
                   Contact
                 </h3>
