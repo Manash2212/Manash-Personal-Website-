@@ -144,8 +144,7 @@ const Hero = () => {
                 }}
               >
                 <motion.img
-                  src="https://res.cloudinary.com/dxmozxqyt/image/upload/v1707030937/Manash_f0wbfw.png"
-                  alt="scroll-btn"
+                  src="https://res.cloudinary.com/dxmozxqyt/image/upload/v1707030091/scrol1_xigjkm.png"
                   className="w-8 h-8 "
                   variants={leftVariants}
                   initial={{

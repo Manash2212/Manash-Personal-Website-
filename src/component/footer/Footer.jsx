@@ -7,12 +7,6 @@ import { GrMapLocation } from "react-icons/gr";
 import { FaSearchLocation } from "react-icons/fa";
 import { FaLocationDot } from "react-icons/fa6";
 
-// import Img1 from "../../../public/Link-1.png";
-// import Img2 from "../../../public/Link-2.png";
-// import Img3 from "../../../public/Link-3.png";
-// import Img4 from "../../../public/Link-4.png";
-// import Img5 from "../../../public/Link-5.png";
-
 const Footer = () => {
   const quickLinks = [
     { name: "Home", link: "hero" },
