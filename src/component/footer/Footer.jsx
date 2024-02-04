@@ -2,21 +2,65 @@
 import Logo from "../../../public/Logo1.png";
 import { Link as LinkScroll } from "react-scroll";
 import { Link } from "react-router-dom";
-
-import Link_1 from "../../../public/Link-1.png";
-import Link_2 from "../../../public/Link-2.png";
-import Link_3 from "../../../public/Link-3.png";
-import Link_4 from "../../../public/Link-4.png";
-import Link_5 from "../../../public/Link-5.png";
-
+import { motion } from "framer-motion";
 import { GrMapLocation } from "react-icons/gr";
-// <GrMapLocation />
 import { FaSearchLocation } from "react-icons/fa";
-// <FaSearchLocation />
 import { FaLocationDot } from "react-icons/fa6";
-// <FaLocationDot />
 
 const Footer = () => {
+  const quickLinks = [
+    { name: "Home", link: "hero" },
+    { name: "About", link: "about" },
+    { name: "Skills", link: "kills" },
+    { name: "Portfolio", link: "portfolio" },
+    { name: "Contact", link: "contact" },
+  ];
+
+  const socialLinks = [
+    {
+      link: "https://twitter.com/always_manash",
+      image: "../../../public/Link-1.png",
+      alt: "twitter",
+    },
+    {
+      link: "https://github.com/Manash2212/",
+      image: "../../../public/Link-2.png",
+      alt: "gitHub",
+    },
+    {
+      link: "https://www.linkedin.com/in/manash-link2212/",
+      image: "../../../public/Link-3.png",
+      alt: "Linkedin",
+    },
+    {
+      link: "https://www.instagram.com/alwaysmanash/",
+      image: "../../../public/Link-4.png",
+      alt: "insta",
+    },
+    {
+      link: "https://www.facebook.com/permalink.php?story_fbid=pfbid0hVrqJBbPpWCi1knRD1sCNrXuxJHS6bHo1aBYBxbAgWTmczRS9AZgDExRa7SaXpzrl&id=100080939478681",
+      image: "../../../public/Link-5.png",
+      alt: "insta",
+    },
+  ];
+
+  const textVariants = {
+    initial: {
+      y: -20,
+      opacity: 0,
+    },
+    animate: {
+      y: 0,
+      opacity: 1,
+    },
+  };
+
+  const footDesc = {
+    animate: {
+      opacity: 1,
+      y: 0,
+    },
+  };
   return (
     <>
       <footer className="footer w-full bg-gray-300 dark:bg-gray-300">
@@ -33,32 +77,29 @@ const Footer = () => {
               <h1 className="col1Heading py-3 text-xl font-bold ">
                 Quick Links
               </h1>
-              <LinkScroll to="hero">
-                <h3 className="col1Title font-medium text-center cursor-pointer">
-                  Home
-                </h3>
-              </LinkScroll>
-              <LinkScroll to="about">
-                <h3 className="col1Title font-medium text-center cursor-pointer">
-                  About
-                </h3>
-              </LinkScroll>
-              <LinkScroll to="skills">
-                <h3 className="col1Title font-medium text-center cursor-pointer">
-                  Skills
-                </h3>
-              </LinkScroll>
-              <LinkScroll to="portfolio">
-                <h3 className="col1Title font-medium text-center cursor-pointer">
-                  Portfolio
-                </h3>
-              </LinkScroll>
-              <LinkScroll to="contact">
-                <h3 className="col1Title font-medium text-center cursor-pointer">
-                  Contact
-                </h3>
-              </LinkScroll>
+              {quickLinks.map((items, i) => (
+                <div className="mapElm" key={i}>
+                  <LinkScroll to={items.link}>
+                    <motion.h3
+                      className="col1Title font-medium text-center cursor-pointer hover:text-primary"
+                      variants={textVariants}
+                      initial="initial"
+                      whileInView="animate"
+                      transition={{
+                        duration: 0.4,
+                        delay: i * 0.2,
+                      }}
+                      viewport={{
+                        once: true,
+                      }}
+                    >
+                      {items.name}
+                    </motion.h3>
+                  </LinkScroll>
+                </div>
+              ))}
             </div>
+
             <div className="col2  flex flex-col items-center justify-between max-sm:mt-4 ">
               <h2 className="col2Heading pb-2 text-xl font-bold">Address</h2>
               <span className="col2Desc font-medium flex items-center gap-2 ">
@@ -74,62 +115,61 @@ const Footer = () => {
                 INDIA
               </span>
             </div>
-            <div className="col3  max-sm:mt-4">
-              <h2 className="col3Heading text-center pb-5 max-sm:pb-2 text-xl font-bold">
-                Social
-              </h2>
-              <div className="links flex items-center justify-between">
-                <Link
-                  to="https://www.facebook.com/permalink.php?story_fbid=pfbid0hVrqJBbPpWCi1knRD1sCNrXuxJHS6bHo1aBYBxbAgWTmczRS9AZgDExRa7SaXpzrl&id=100080939478681"
-                  target="_blank"
-                >
-                  <img
-                    src={Link_1}
-                    alt="Facebook"
-                    className="socialLink hover:shadow-lg shadow-lg shadow-slate-500 hover:shadow-slate-900 rounded-full mr-2  w-12 h-12 max-sm:w-12 max-sm:h-12"
-                  />
-                </Link>
-                <Link
-                  to="https://www.instagram.com/alwaysmanash/"
-                  target="_blank"
-                >
-                  <img
-                    src={Link_2}
-                    alt="Insta"
-                    className="socialLink hover:shadow-lg shadow-lg shadow-slate-500 hover:shadow-slate-900 rounded-full mr-2  w-12 h-12 max-sm:w-12 max-sm:h-12"
-                  />
-                </Link>
-                <Link
-                  to="https://www.linkedin.com/in/manash-link2212/"
-                  target="_blank"
-                >
-                  <img
-                    src={Link_3}
-                    alt="Linkedin"
-                    className="socialLink hover:shadow-lg shadow-lg shadow-slate-500 hover:shadow-slate-900 rounded-full mr-2  w-12 h-12 max-sm:w-12 max-sm:h-12"
-                  />
-                </Link>
-                <Link to="https://github.com/Manash2212/" target="_blank">
-                  <img
-                    src={Link_4}
-                    alt="GitHub"
-                    className="socialLink hover:shadow-lg shadow-lg shadow-slate-500 hover:shadow-slate-900 rounded-full mr-2  w-12 h-12 max-sm:w-12 max-sm:h-12"
-                  />
-                </Link>
-                <Link to="https://twitter.com/always_manash" target="_blank">
-                  <img
-                    src={Link_5}
-                    alt="Twitter"
-                    className="socialLink hover:shadow-lg shadow-lg shadow-slate-500 hover:shadow-slate-900 rounded-full mr-2  w-12 h-12 max-sm:w-12 max-sm:h-12"
-                  />
-                </Link>
+            <div className="col3  max-sm:mt-4 flex flex-col items-center justify-between">
+              <div className="headContainer">
+                <h2 className="col3Heading text-center pb-5 max-sm:pb-2 text-xl font-bold">
+                  Social
+                </h2>
+              </div>
+              <div className="linksContainer flex items-center justify-between">
+                {socialLinks.map((e, i) => (
+                  <motion.div
+                    className="links  "
+                    key={i}
+                    variants={textVariants}
+                    initial="initial"
+                    whileInView="animate"
+                    transition={{
+                      duration: 0.4,
+                      delay: i * 0.2,
+                    }}
+                    viewport={{
+                      once: true,
+                    }}
+                  >
+                    <Link to={e.link} target="_blank">
+                      <img
+                        src={e.image}
+                        alt={e.alt}
+                        className="socialLink hover:shadow-lg shadow-lg shadow-slate-500 hover:shadow-slate-900 rounded-full mr-2  w-12 h-12 max-sm:w-12 max-sm:h-12"
+                      />
+                    </Link>
+                  </motion.div>
+                ))}
               </div>
             </div>
           </div>
           <div className="copyRight text-secondary w-full py-5 bg-slate-700 text-center">
-            <span className="footerDesc">&copy; 2024 Manash Halder</span>
+            <motion.div
+              className="footerDesc"
+              variants={footDesc}
+              initial={{
+                opacity: 0,
+                y: 20,
+              }}
+              whileInView="animate"
+              transition={{
+                duration: 0.9,
+                delay: 1.7,
+              }}
+              viewport={{
+                once: true,
+              }}
+            >
+              <span className="footerDesc">&copy; 2024 Manash Halder</span>
 
-            <span className="footerDesc"> All rights reserved</span>
+              <span className="footerDesc"> All rights reserved</span>
+            </motion.div>
           </div>
         </div>
       </footer>
