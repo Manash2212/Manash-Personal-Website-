@@ -22,8 +22,9 @@ const projects = [
   {
     name: "Crypto tracker",
     description: "Implemented a crypto curruency tracker application",
-    image: "../../../public/Project_4.jpg",
-    url: "https://res.cloudinary.com/dxmozxqyt/image/upload/v1707030122/Project_4_evcyaf.jpg",
+    image:
+      "https://res.cloudinary.com/dxmozxqyt/image/upload/v1707030122/Project_4_evcyaf.jpg",
+    url: "https://crypto-currency-chakra-ui.vercel.app/",
     alt: "Crypto",
   },
   {
