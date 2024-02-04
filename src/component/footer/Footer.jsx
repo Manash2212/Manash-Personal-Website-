@@ -1,5 +1,3 @@
-// import React from 'react'
-import Logo from "../../../public/Logo1.png";
 import { Link as LinkScroll } from "react-scroll";
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
@@ -73,7 +71,7 @@ const Footer = () => {
           <div className="container max-w-screen-xl py-4 flex items-center justify-between max-sm:flex-col  ">
             <div className="myLogo">
               <img
-                src={Logo}
+                src="https://res.cloudinary.com/dxmozxqyt/image/upload/v1707030102/Logo1_ohmhas.png"
                 alt="myLogo"
                 className="max-w-60 max-h-60 max-sm:max-w-40 max-sm:max-h-40 rounded-full"
               />

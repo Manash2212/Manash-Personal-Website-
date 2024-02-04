@@ -1,6 +1,8 @@
 // import { useEffect, useRef } from "react";
 import TiltCard from "./TiltCard";
 import { motion } from "framer-motion";
+import { Link } from "react-router-dom";
+import MyResume from "../../assets/Mansh_Resume_2024.pdf";
 
 const About = () => {
   const textVariants = {
@@ -55,7 +57,7 @@ const About = () => {
               whileInView="animate"
               transition={{
                 duration: 1,
-                delay: 0.2,
+                delay: 1,
               }}
               viewport={{
                 once: true,
@@ -70,7 +72,7 @@ const About = () => {
               whileInView="animate"
               transition={{
                 duration: 1,
-                delay: 0.3,
+                delay: 1.3,
               }}
               viewport={{
                 once: true,
@@ -92,7 +94,7 @@ const About = () => {
               whileInView="animate"
               transition={{
                 duration: 1,
-                delay: 0.6,
+                delay: 1.5,
               }}
               viewport={{
                 once: true,
@@ -109,7 +111,7 @@ const About = () => {
               whileInView="animate"
               transition={{
                 duration: 1,
-                delay: 0.9,
+                delay: 1.7,
               }}
               viewport={{
                 once: true,
@@ -143,15 +145,21 @@ const About = () => {
               whileInView="animate"
               transition={{
                 duration: 1,
-                delay: 1,
+                delay: 1.9,
               }}
               viewport={{
                 once: true,
               }}
             >
-              <button className=" border-red-800 rounded-md  font-bold dark:text-white cursor-pointer primary-btn !px-6">
-                Download Resume
-              </button>
+              <Link
+                to={MyResume}
+                download="Mansh_Resume_2024.pdf"
+                target="_blank"
+              >
+                <button className=" border-red-800 rounded-md  font-bold dark:text-white cursor-pointer primary-btn !px-6">
+                  Download Resume
+                </button>
+              </Link>
             </motion.div>
           </div>
         </div>

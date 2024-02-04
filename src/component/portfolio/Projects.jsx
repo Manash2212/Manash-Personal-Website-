@@ -5,23 +5,25 @@ const projects = [
   {
     name: "Personal portfolio",
     description:
-      "Implemented a Personal Portfolio using Vite+React Tailwind CSS, Framer motion , and Lots of",
+      "Implemented a Personal Portfolio using Vite+React Tailwind CSS, Framer motion , and Lots of Technologies",
     image:
-      "https://res.cloudinary.com/dxmozxqyt/image/upload/v1707030105/Project_2_q5dhde.jpg",
+      "https://res.cloudinary.com/dxmozxqyt/image/upload/v1707050136/GridArt_20240204_180210529_co22s3.jpg",
     url: "https://github.com/",
     alt: "Personal-Portfolio",
   },
   {
     name: "Video hub",
-    description: "Implemented a Video Service app ",
+    description:
+      "Created a Video Gaming services application, developed front-end part using React.js for seamless user interface. Fully Responsive Website, as well as implemented Light and Dark Mode ",
     image:
       "https://res.cloudinary.com/dxmozxqyt/image/upload/v1707030105/Project_2_q5dhde.jpg",
     url: "https://video-hub-chakra-ui-eight.vercel.app/",
     alt: "Video Hub",
   },
   {
-    name: "Crypto tracker",
-    description: "Implemented a crypto curruency tracker application",
+    name: "Coin In Kuber",
+    description:
+      "Developed a full-fledged crypto currency tracker platform aimed at providing users with a seamless and secure Tracking details of Coins ",
     image:
       "https://res.cloudinary.com/dxmozxqyt/image/upload/v1707030122/Project_4_evcyaf.jpg",
     url: "https://crypto-currency-chakra-ui.vercel.app/",
@@ -48,11 +50,11 @@ const Projects = () => {
   return (
     <>
       <section id="projects" className="my-10 container ">
-        <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 order- ">
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
           {projects.map((project, i) => (
             <motion.div
               key={i}
-              className=" bg-slate-200 dark:bg-gray-800 flex items-center justify-between max-sm:flex-col rounded-xl hover:bg-slate-300 shadow-lg py-4"
+              className=" bg-slate-200 dark:bg-gray-800 flex items-center justify-between max-sm:flex-col rounded-xl hover:bg-slate-300 shadow-lg py-4 max-md:px-3 max-sm:px-3 "
               variants={cardVariants}
               initial={{
                 opacity: 0,

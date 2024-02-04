@@ -1,5 +1,4 @@
 import { useRef, useState } from "react";
-import ContactImg from "../../../public/contact.png";
 import emailjs from "@emailjs/browser";
 import { motion } from "framer-motion";
 

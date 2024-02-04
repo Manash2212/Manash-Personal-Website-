@@ -1,4 +1,4 @@
-import { Link } from "react-router-dom";
+import { Link as LinkScroll } from "react-router-dom";
 import { motion } from "framer-motion";
 
 const Hero = () => {
@@ -124,9 +124,9 @@ const Hero = () => {
                   },
                 }}
               >
-                <Link to="manashhalder2212@gmial.com" className=" ">
+                <LinkScroll to="contact" className=" ">
                   <p className=" hover:scale-125">Hire me</p>
-                </Link>
+                </LinkScroll>
               </motion.div>
               <motion.div
                 className="imgScroll"

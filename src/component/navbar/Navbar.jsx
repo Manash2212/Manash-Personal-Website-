@@ -4,7 +4,6 @@ import { Link } from "react-scroll";
 import { FiX } from "react-icons/fi";
 import { FiAlignRight } from "react-icons/fi";
 import { BiSolidMoon, BiSolidSun } from "react-icons/bi";
-import Logo from "../../../public/Logo1.png";
 import { motion } from "framer-motion";
 
 const navMenus = [
@@ -54,7 +53,7 @@ const Navbar = () => {
           <div className="author flex">
             <Link to="hero" className="flex items-center gap-2">
               <motion.img
-                src={Logo}
+                src="https://res.cloudinary.com/dxmozxqyt/image/upload/v1707030102/Logo1_ohmhas.png"
                 alt="logo"
                 className="w-10 h-10 rounded-full cursor-pointer"
                 initial={{ opacity: 0, translateX: -100 }}
