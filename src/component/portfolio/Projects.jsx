@@ -20,6 +20,13 @@ const projects = [
     alt: "Video Hub",
   },
   {
+    name: "Crypto tracker",
+    description: "Implemented a crypto curruency tracker application",
+    image: "../../../public/Project_4.jpg",
+    url: "https://res.cloudinary.com/dxmozxqyt/image/upload/v1707030122/Project_4_evcyaf.jpg",
+    alt: "Crypto",
+  },
+  {
     name: "Restaurent website",
     description:
       "Implemented a Restaurent Website using HTML5 and CSS3 to utilize my FlexBox Skill",
@@ -27,13 +34,6 @@ const projects = [
       "https://res.cloudinary.com/dxmozxqyt/image/upload/v1707030185/Project_3_tadufm.jpg",
     url: "https://restaurent-flex.vercel.app/",
     alt: "Restaurent",
-  },
-  {
-    name: "Crypto tracker",
-    description: "Implemented a crypto curruency tracker application",
-    image: "../../../public/Project_4.jpg",
-    url: "https://res.cloudinary.com/dxmozxqyt/image/upload/v1707030122/Project_4_evcyaf.jpg",
-    alt: "Crypto",
   },
 ];
 const cardVariants = {
