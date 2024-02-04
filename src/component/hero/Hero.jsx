@@ -1,5 +1,3 @@
-import Person from "../../../public/Manash.png";
-import Scroll from "../../../public/scrol1.png";
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
 
@@ -146,7 +144,7 @@ const Hero = () => {
                 }}
               >
                 <motion.img
-                  src={Scroll}
+                  src="https://res.cloudinary.com/dxmozxqyt/image/upload/v1707030937/Manash_f0wbfw.png"
                   alt="scroll-btn"
                   className="w-8 h-8 "
                   variants={leftVariants}
@@ -174,7 +172,7 @@ const Hero = () => {
             }}
           >
             <img
-              src={Person}
+              src="https://res.cloudinary.com/dxmozxqyt/image/upload/v1707030937/Manash_f0wbfw.png"
               alt="Hero-img"
               className="w-full max-h-full md:max-w-lg mx-auto "
             />

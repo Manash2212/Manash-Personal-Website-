@@ -36,7 +36,8 @@ const Contact = () => {
   };
 
   const backgrouundStyle = {
-    backgroundImage: "url(../../../public/map2.png)",
+    backgroundImage:
+      "url(https://res.cloudinary.com/dxmozxqyt/image/upload/v1707030085/map2_dd0it7.png)",
     backgrouundSize: "cover",
     backgroundPosition: "center",
   };
@@ -98,7 +99,7 @@ const Contact = () => {
           <div className="max-w-screen-xl mx-auto  flex items-center justify-between max-sm:flex-col max-sm:gap-5 py-20 px-5">
             <div className="contactImg  w-5/12 h-3/5 max-sm:w-full max-sm:h-full max-md:w-full max-md:h-full shadow-xl rounded-xl py-3">
               <motion.img
-                src={ContactImg}
+                src="https://res.cloudinary.com/dxmozxqyt/image/upload/v1707030110/contact_m7rt9m.png"
                 alt="ContactImg"
                 className="mx-auto w-full   "
                 variants={imgVariant}

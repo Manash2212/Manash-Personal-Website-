@@ -7,6 +7,12 @@ import { GrMapLocation } from "react-icons/gr";
 import { FaSearchLocation } from "react-icons/fa";
 import { FaLocationDot } from "react-icons/fa6";
 
+// import Img1 from "../../../public/Link-1.png";
+// import Img2 from "../../../public/Link-2.png";
+// import Img3 from "../../../public/Link-3.png";
+// import Img4 from "../../../public/Link-4.png";
+// import Img5 from "../../../public/Link-5.png";
+
 const Footer = () => {
   const quickLinks = [
     { name: "Home", link: "hero" },
@@ -19,28 +25,33 @@ const Footer = () => {
   const socialLinks = [
     {
       link: "https://twitter.com/always_manash",
-      image: "../../../public/Link-1.png",
+      image:
+        "https://res.cloudinary.com/dxmozxqyt/image/upload/v1707030090/Link-5_b3gyno.png",
       alt: "twitter",
     },
     {
       link: "https://github.com/Manash2212/",
-      image: "../../../public/Link-2.png",
+      image:
+        "https://res.cloudinary.com/dxmozxqyt/image/upload/v1707030111/Link-4_dbv01i.png",
       alt: "gitHub",
     },
     {
       link: "https://www.linkedin.com/in/manash-link2212/",
-      image: "../../../public/Link-3.png",
+      image:
+        "https://res.cloudinary.com/dxmozxqyt/image/upload/v1707030088/Link-3_vlmwsq.png",
       alt: "Linkedin",
     },
     {
       link: "https://www.instagram.com/alwaysmanash/",
-      image: "../../../public/Link-4.png",
+      image:
+        "https://res.cloudinary.com/dxmozxqyt/image/upload/v1707030097/Link-2_kkx9f3.png",
       alt: "insta",
     },
     {
       link: "https://www.facebook.com/permalink.php?story_fbid=pfbid0hVrqJBbPpWCi1knRD1sCNrXuxJHS6bHo1aBYBxbAgWTmczRS9AZgDExRa7SaXpzrl&id=100080939478681",
-      image: "../../../public/Link-5.png",
-      alt: "insta",
+      image:
+        "https://res.cloudinary.com/dxmozxqyt/image/upload/v1707030085/Link-1_tcu9tv.png",
+      alt: "facebook",
     },
   ];
 

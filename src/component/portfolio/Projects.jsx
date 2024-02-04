@@ -6,14 +6,16 @@ const projects = [
     name: "Personal portfolio",
     description:
       "Implemented a Personal Portfolio using Vite+React Tailwind CSS, Framer motion , and Lots of",
-    image: "../../../public/Project_2.jpg",
+    image:
+      "https://res.cloudinary.com/dxmozxqyt/image/upload/v1707030105/Project_2_q5dhde.jpg",
     url: "https://github.com/",
     alt: "Personal-Portfolio",
   },
   {
     name: "Video hub",
     description: "Implemented a Video Service app ",
-    image: "../../../public/Project_2.jpg",
+    image:
+      "https://res.cloudinary.com/dxmozxqyt/image/upload/v1707030105/Project_2_q5dhde.jpg",
     url: "https://video-hub-chakra-ui-eight.vercel.app/",
     alt: "Video Hub",
   },
@@ -21,7 +23,8 @@ const projects = [
     name: "Restaurent website",
     description:
       "Implemented a Restaurent Website using HTML5 and CSS3 to utilize my FlexBox Skill",
-    image: "../../../public/Project_3.jpg",
+    image:
+      "https://res.cloudinary.com/dxmozxqyt/image/upload/v1707030185/Project_3_tadufm.jpg",
     url: "https://restaurent-flex.vercel.app/",
     alt: "Restaurent",
   },
@@ -29,7 +32,7 @@ const projects = [
     name: "Crypto tracker",
     description: "Implemented a crypto curruency tracker application",
     image: "../../../public/Project_4.jpg",
-    url: "https://crypto-currency-chakra-ui.vercel.app/",
+    url: "https://res.cloudinary.com/dxmozxqyt/image/upload/v1707030122/Project_4_evcyaf.jpg",
     alt: "Crypto",
   },
 ];

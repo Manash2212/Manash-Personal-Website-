@@ -1,7 +1,3 @@
-// import { FiMousePointer } from "react-icons/fi";
-// import Person from "../../../public/person2.png";
-import Img from "../../../public/M5.png";
-
 import { motion, useMotionValue, useSpring, useTransform } from "framer-motion";
 
 const TiltCard = () => {
@@ -54,7 +50,10 @@ const TiltCard = () => {
           }}
           className=" inset-4 grid place-content-center  "
         >
-          <img src={Img} alt="hover-effect" />
+          <img
+            src="https://res.cloudinary.com/dxmozxqyt/image/upload/v1707030167/M5_n80dev.png"
+            alt="hover-effect"
+          />
         </div>
       </motion.div>
     </>
