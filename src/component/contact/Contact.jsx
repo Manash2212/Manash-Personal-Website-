@@ -36,7 +36,7 @@ const Contact = () => {
   };
 
   const backgrouundStyle = {
-    backgroundImage: "url(../../../public/map2.png",
+    backgroundImage: "url(../../../public/map2.png)",
     backgrouundSize: "cover",
     backgroundPosition: "center",
   };

@@ -8,12 +8,14 @@ const projects = [
       "Implemented a Personal Portfolio using Vite+React Tailwind CSS, Framer motion , and Lots of",
     image: "../../../public/Project_2.jpg",
     url: "https://github.com/",
+    alt: "Personal-Portfolio",
   },
   {
     name: "Video hub",
     description: "Implemented a Video Service app ",
     image: "../../../public/Project_2.jpg",
     url: "https://video-hub-chakra-ui-eight.vercel.app/",
+    alt: "Video Hub",
   },
   {
     name: "Restaurent website",
@@ -21,12 +23,14 @@ const projects = [
       "Implemented a Restaurent Website using HTML5 and CSS3 to utilize my FlexBox Skill",
     image: "../../../public/Project_3.jpg",
     url: "https://restaurent-flex.vercel.app/",
+    alt: "Restaurent",
   },
   {
     name: "Crypto tracker",
     description: "Implemented a crypto curruency tracker application",
     image: "../../../public/Project_4.jpg",
     url: "https://crypto-currency-chakra-ui.vercel.app/",
+    alt: "Crypto",
   },
 ];
 const cardVariants = {
@@ -66,7 +70,7 @@ const Projects = () => {
               >
                 <img
                   src={project.image}
-                  alt=""
+                  alt={project.alt}
                   className="max-w-48 max-h-48 m-2 rounded-xl"
                 />
                 <div className="aboutContent mx-auto flex flex-col gap-2 text-center">
