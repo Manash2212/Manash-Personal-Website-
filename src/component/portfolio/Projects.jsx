@@ -8,7 +8,7 @@ const projects = [
       "Implemented a Personal Portfolio using Vite+React Tailwind CSS, Framer motion , and Lots of Technologies",
     image:
       "https://res.cloudinary.com/dxmozxqyt/image/upload/v1707050136/GridArt_20240204_180210529_co22s3.jpg",
-    url: "https://github.com/",
+    url: "https://manash-dev.vercel.app/",
     alt: "Personal-Portfolio",
   },
   {
